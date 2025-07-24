@@ -67,7 +67,7 @@ const initialMemories = [
     title: "Repo With You",
     date: "March 9, 2025",
     type: "video",
-    mediaUrl: "/photos/repo.mp4",
+    mediaUrl: "https://youtu.be/XvvgT2FIj0M",
     caption: "Playing Repo with You",
     description:
       "We played REPO and we found out that the love potion can make you talk. We touched it alternately and all those words that my character said were all true. I love you so much and I wish I could play it with you again.",
