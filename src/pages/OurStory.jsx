@@ -7,7 +7,7 @@ const backgrounds = [
   "bg-cyan-300",  // page 2 - ice
   "bg-red-400",   // page 3 - fire
   "bg-gradient-to-b from-blue-900 to-black",
-  "bg-pink-200"   // page 5
+  "bg-pink-200"   // page 5 - special
 ];
 
 const milestones = [
@@ -31,7 +31,7 @@ const milestones = [
   { title: "Meet the Parents!", img: "/images/meet-our-parents.jpg", description: "You and my family went out to eat some all-you-can-eat buffet. We had our dogs with us too. It was also the first time that you met my father too" },
   { title: "Another Year For You!", img: "/images/celebration2.jpg", description: "We celebrated your birthday together and spent the rest of the days together until new year. I love you so much" },
   { title: "Graduation Day With You!", img: "/images/graduation.jpg", description: "You were at my graduation day. It was already the best give ever. Yet, you gave me flowers and it was my first time receiving. You brought me to tears. I love you so much!" },
-  { title: "Forever Promise", img: "", description: "Our relationship wasn’t perfect — but it was the most beautiful chapter of my life. You taught me so much you made me see the world through a softer lens. With your gentle soul and pure heart, you showed me what true love really feels like — patient, kind, and unwavering. I will carry those moments with me always. Even if our time together was short, its impact will last forever. I understand that you want to rest for now, but my love for you remains — deeper than ever. I will wait. Whether it takes months or years, I will wait for the day your heart finds its way back to mine. Because I still love you — endlessly and unconditionally. And I will continue loving you, by your side, until my very last breath." }
+  { title: "Forever Promise", img: "", description: "Our relationship wasn’t perfect — but it was the most beautiful chapter of my life. You taught me so much you made me see the world through a softer lens. With your gentle soul and pure heart, you showed me what true love really feels like — patient, kind, and unwavering. I will carry those moments with me always. I understand that you want to rest for now, but my love for you remains — deeper than ever. I will wait. Whether it takes months or years, I will wait for the day your heart finds its way back to mine. Because I still love you — endlessly and unconditionally. And I will continue loving you, by your side, until my very last breath. And when you are ready, I will court you again and show you my love. This time it will be right. I love you" }
 ];
 
 const OurStory = () => {
@@ -232,7 +232,6 @@ const OurStory = () => {
             ))}
           </div>
 
-          {/* Navigation Arrows */}
           <button
             onClick={handlePrev}
             disabled={page === 0}
@@ -258,58 +257,98 @@ const OurStory = () => {
         </div>
       </div>
 
-      {/* Modal */}
-      {modalData && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-          <div className="relative bg-yellow-300 border-4 border-red-600 rounded-3xl shadow-lg max-w-md w-full p-6 mario-modal">
-            <button
-              onClick={closeModal}
-              className="absolute top-3 right-3 text-red-700 hover:text-red-500 text-3xl font-extrabold drop-shadow-lg"
-              style={{ textShadow: "1px 1px 0 #fff" }}
-            >
-              ×
-            </button>
+{modalData && (
+  <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div className={`relative ${modalData.title === "Forever Promise" 
+      ? "bg-gradient-to-b from-purple-900 via-blue-900 to-black w-full h-full flex flex-col justify-center items-center text-center p-8" 
+      : "bg-yellow-300 border-4 border-red-600 rounded-3xl shadow-lg max-w-md w-full p-6 mario-modal"
+    }`}>
+      <button
+        onClick={closeModal}
+        className={`absolute ${modalData.title === "Forever Promise" 
+          ? "top-8 right-8 text-white hover:text-gray-300 text-4xl font-bold z-10" 
+          : "top-3 right-3 text-red-700 hover:text-red-500 text-3xl font-extrabold drop-shadow-lg"
+        }`}
+        style={modalData.title === "Forever Promise" ? {} : { textShadow: "1px 1px 0 #fff" }}
+      >
+        ×
+      </button>
 
-            <div className="flex justify-center mb-4">
+      {modalData.title === "Forever Promise" ? (
+
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="flex justify-center mb-8">
+            <div className="relative">
               <img
-                src="/images/mario-coinn.png"
-                alt="Mario Coin"
-                className="w-12 h-12 animate-bounce"
+                src="/images/heartt.png"
+                alt="Heart"
+                className="w-24 h-24 animate-pulse"
               />
+              <div className="absolute inset-0 bg-pink-500 opacity-50 rounded-full animate-ping"></div>
             </div>
+          </div>
 
-            {modalData.img && (
-              <img
-                src={modalData.img}
-                alt={modalData.title}
-                className="w-full max-h-[50vh] object-contain rounded-xl border-4 border-red-600 shadow-md"
-              />
-            )}
+          <h2 className="text-5xl font-bold mb-8 text-white drop-shadow-2xl leading-tight">
+            {modalData.title}
+          </h2>
 
-            <h2 className="text-3xl font-extrabold mt-4 mb-2 text-center text-red-700 drop-shadow-md mario-font">
-              {modalData.title}
-            </h2>
-
-            <p className="text-center text-gray-800 text-lg leading-relaxed px-2 mario-font">
+          <div className="space-y-6 text-white text-xl leading-relaxed max-h-[60vh] flex items-center justify-center">
+            <p className="drop-shadow-lg max-w-3xl">
               {modalData.description}
             </p>
           </div>
 
-          <style>{
-            `.mario-font {
-              font-family: 'Press Start 2P', cursive, sans-serif;
-            }
-            .mario-modal {
-              box-shadow: 0 0 20px #ffcc00, 0 0 40px #ff9900, 0 0 60px #ff6600;
-              animation: pop-up 0.3s ease-out;
-            }
-            @keyframes pop-up {
-              0% { transform: scale(0.7); opacity: 0; }
-              100% { transform: scale(1); opacity: 1; }
-            }`
-          }</style>
+          <div className="flex justify-center space-x-4 mt-8">
+            <img src="/images/heartt.png" className="w-8 h-8 animate-bounce" style={{ animationDelay: "0s" }} alt="Heart" />
+            <img src="/images/heartt.png" className="w-8 h-8 animate-bounce" style={{ animationDelay: "0.2s" }} alt="Heart" />
+            <img src="/images/heartt.png" className="w-8 h-8 animate-bounce" style={{ animationDelay: "0.4s" }} alt="Heart" />
+          </div>
         </div>
+      ) : (
+
+        <>
+          <div className="flex justify-center mb-4">
+            <img
+              src="/images/mario-coinn.png"
+              alt="Mario Coin"
+              className="w-12 h-12 animate-bounce"
+            />
+          </div>
+
+          {modalData.img && (
+            <img
+              src={modalData.img}
+              alt={modalData.title}
+              className="w-full max-h-[50vh] object-contain rounded-xl border-4 border-red-600 shadow-md"
+            />
+          )}
+
+          <h2 className="text-3xl font-extrabold mt-4 mb-2 text-center text-red-700 drop-shadow-md mario-font">
+            {modalData.title}
+          </h2>
+
+          <p className="text-center text-gray-800 text-lg leading-relaxed px-2 mario-font">
+            {modalData.description}
+          </p>
+        </>
       )}
+    </div>
+
+    <style>{
+      `.mario-font {
+        font-family: 'Press Start 2P', cursive, sans-serif;
+      }
+      .mario-modal {
+        box-shadow: 0 0 20px #ffcc00, 0 0 40px #ff9900, 0 0 60px #ff6600;
+        animation: pop-up 0.3s ease-out;
+      }
+      @keyframes pop-up {
+        0% { transform: scale(0.7); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+      }`
+    }</style>
+  </div>
+)}
 
       {/* Animations */}
       <style>{

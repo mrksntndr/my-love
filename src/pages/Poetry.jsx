@@ -123,12 +123,9 @@ useEffect(() => {
   ← Go back
 </button>
 
-        {/* Book cover shadow */}
         <div className="absolute -bottom-4 left-0 right-0 h-4 bg-gray-300 blur-lg opacity-50 rounded-full"></div>
-        
-        {/* Main book container */}
+
         <div className="relative flex h-[32rem] shadow-2xl overflow-hidden rounded-lg">
-          {/* Book spine */}
           <div className="w-12 flex flex-col items-center justify-between py-8 bg-gradient-to-b from-amber-800 to-amber-900">
             <div className="h-16 w-8 bg-amber-900 rounded-sm"></div>
             <div className="text-center vertical-text text-amber-100 font-bold tracking-wider">
@@ -136,13 +133,11 @@ useEffect(() => {
             </div>
             <div className="h-16 w-8 bg-amber-900 rounded-sm"></div>
           </div>
-          
-          {/* Left page */}
+
           <div className={`flex-1 flex flex-col ${currentPoem.color} relative overflow-hidden`}>
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExIDE4YzMuODY2IDAgNy0zLjEzNCA3LTdzLTMuMTM0LTctNy03LTcgMy4xMzQtNyA3IDMuMTM0IDcgNyA3em00OCAyNWMzLjg2NiAwIDctMy4xMzQgNy03cy0zLjEzNC03LTctNy03IDMuMTM0LTcgNyAzLjEzNCA3IDcgN3ptLTQzLTdjMS42NTcgMCAzLTEuMzQzIDMtM3MtMS4zNDMtMy0zLTMtMyAxLjM0My0zIDMgMS4zNDMgMyAzIDN6bTYzIDMxYzEuNjU3IDAgMy0xLjM0MyAzLTMtMC4wMDEtMS42NTctMS4zNDQtMy0zLTNzLTMgMS4zNDMtMyAzYzAgMS42NTcgMS4zNDMgMyAzIDN6TTM0IDkwYzEuNjU3IDAgMy0xLjM0MyAzLTMgMC0xLjY1Ny0xLjM0My0zLTMtM3MtMyAxLjM0My0zIDNjMCAxLjY1NyAxLjM0MyAzIDMgM3ptNTYtNzZjMS42NTcgMCAzLTEuMzQzIDMtM3MtMS4zNDMtMy0zLTMtMyAxLjM0My0zIDMgMS4zNDMgMyAzIDN6TTEyIDg2YzIuMjEgMCA0LTEuNzkgNC00IDAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0YzAgMi4yMSAxLjc5IDQgNCA0em0yOC02NWMyLjIxIDAgNC0xLjc5IDQtNHMtMS43OS00LTQtNC00IDEuNzktNCA0IDEuNzkgNCA0IDR6bTIzLTExYzIuNzYgMCA1LTIuMjQgNS01cy0yLjI0LTUtNS01LTUgMi4yNC01IDUgMi4yNCA1IDUgNXptLTYgNjBjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTQtNCAxLjc5LTQgNCAxLjc5IDQgNCA0em0yOSAyMmMyLjc2IDAgNS0yLjI0IDUtNXMtMi4yNC01LTUtNS01IDIuMjQtNSA1IDIuMjQgNSA1IDV6TTMyIDYzYzIuNzYgMCA1LTIuMjQgNS01cy0yLjI0LTUtNS01LTUgMi4yNC01IDUgMi4yNCA1IDUgNXptNTctMTNjMi43NiAwIDUtMi4yNCA1LTUtMC4wMS0yLjc2LTIuMjUtNS01LTVzLTUgMi4yNC01IDVjMCAyLjc2IDIuMjQgNSA1IDV6bS05LTIxYzEuMTA1IDAgMi0wLjg5NSAyLTJzLTAuODk1LTItMi0yLTIgMC44OTUtMiAyIDAuODk1IDIgMiAyek02MCA5MWMxLjEwNSAwIDItMC44OTUgMi0ycy0wLjg5NS0yLTItMi0yIDAuLjg5NS0yIDIgMC44OTUgMiAyIDJ6TTM1IDQxYzEuMTA1IDAgMi0wLjg5NSAyLTJzLTAuODk1LTItMi0yLTIgMC44OTUtMiAyIDAuODk1IDIgMiAyek0xMiA2MGMxLjEwNSAwIDItMC44OTUgMi0ycy0wLjg5NS0yLTItMi0yIDAuODk1LTIgMiAwLjg5NSAyIDIgMnoiIGZpbGw9IiNlMGQ2YzIiIGZpbGwtb3BhY2l0eT0iMC4xNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')]"></div>
             <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-transparent via-transparent to-amber-200"></div>
-            
-            {/* Decorative elements */}
+
             <div className="absolute top-4 left-4 h-8 w-8 border-b-2 border-r-2 border-amber-800"></div>
             <div className="absolute bottom-4 right-4 h-8 w-8 border-t-2 border-l-2 border-amber-800"></div>
             
@@ -203,13 +198,11 @@ useEffect(() => {
               )}
             </div>
           </div>
-          
-          {/* Right page */}
+
           <div className={`flex-1 flex flex-col ${currentPoem.color} relative overflow-hidden`}>
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExIDE4YzMuODY2IDAgNy0zLjEzNCA3LTdzLTMuMTM0LTctNy03LTcgMy4xMzQtNyA3IDMuMTM0IDcgNyA3em00OCAyNWMzLjg2NiAwIDctMy4xMzQgNy03cy0zLjEzNC03LTctNy03IDMuMTM0LTcgNyAzLjEzNCA3IDcgN3ptLTQzLTdjMS42NTcgMCAzLTEuMzQzIDMtM3MtMS4zNDMtMy0zLTMtMyAxLjM0My0zIDMgMS4zNDMgMyAzIDN6bTYzIDMxYzEuNjU3IDAgMy0xLjM0MyAzLTMtMC4wMDEtMS42NTctMS4zNDQtMy0zLTNzLTMgMS4zNDMtMyAzYzAgMS42NTcgMS4zNDMgMyAzIDN6TTM0IDkwYzEuNjU3IDAgMy0xLjM0MyAzLTMgMC0xLjY1Ny0xLjM0My0zLTMtM3MtMyAxLjM0My0zIDNjMCAxLjY1NyAxLjM0MyAzIDMgM3ptNTYtNzZjMS42NTcgMCAzLTEuMzQzIDMtM3MtMS4zNDMtMy0zLTMtMyAxLjM0My0zIDMgMS4zNDMgMyAzIDN6TTEyIDg2YzIuMjEgMCA0LTEuNzkgNC00IDAtMi4yMS0xLjc5LTQtNC00cy00IDEuNzktNCA0YzAgMi4yMSAxLjc5IDQgNCA0em0yOC02NWMyLjIxIDAgNC0xLjc5IDQtNHMtMS43OS00LTQtNC00IDEuNzktNCA0IDEuNzkgNCA0IDR6bTIzLTExYzIuNzYgMCA1LTIuMjQgNS01cy0yLjI0LTUtNS01LTUgMi4yNC01IDUgMi4yNCA1IDUgNXptLTYgNjBjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTQtNCAxLjc5LTQgNCAxLjc5IDQgNCA0em0yOSAyMmMyLjc2IDAgNS0yLjI0IDUtNXMtMi4yNC01LTUtNS01IDIuMjQtNSA1IDIuMjQgNSA1IDV6TTMyIDYzYzIuNzYgMCA1LTIuMjQgNS01cy0yLjI0LTUtNS01LTUgMi4yNC01IDUgMi4yNCA1IDUgNXptNTctMTNjMi43NiAwIDUtMi4yNCA1LTUtMC4wMS0yLjc2LTIuMjUtNS01LTVzLTUgMi4yNC01IDVjMCAyLjc2IDIuMjQgNSA1IDV6bS05LTIxYzEuMTA1IDAgMi0wLjg5NSAyLTJzLTAuODk1LTItMi0yLTIgMC44OTUtMiAyIDAuODk1IDIgMiAyek02MCA5MWMxLjEwNSAwIDItMC44OTUgMi0ycy0wLjg5NS0yLTItMi0yIDAuLjg5NS0yIDIgMC44OTUgMiAyIDJ6TTM1IDQxYzEuMTA1IDAgMi0wLjg5NSAyLTJzLTAuODk1LTItMi0yLTIgMC44OTUtMiAyIDAuODk1IDIgMiAyek0xMiA2MGMxLjEwNSAwIDItMC44OTUgMi0ycy0wLjg5NS0yLTItMi0yIDAuODk1LTIgMiAwLjg5NSAyIDIgMnoiIGZpbGw9IiNlMGQ2YzIiIGZpbGwtb3BhY2l0eT0iMC4xNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')]"></div>
             <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-transparent via-transparent to-amber-200"></div>
-            
-            {/* Decorative elements */}
+
             <div className="absolute top-4 right-4 h-8 w-8 border-b-2 border-l-2 border-amber-800"></div>
             <div className="absolute bottom-4 left-4 h-8 w-8 border-t-2 border-r-2 border-amber-800"></div>
             
@@ -250,8 +243,7 @@ useEffect(() => {
             </div>
           </div>
         </div>
-        
-        {/* Page flipping animation container */}
+
         {isFlipping && (
           <div className="absolute inset-0 pointer-events-none" style={{ perspective: 1500 }}>
             <div className="relative h-full w-full">
@@ -268,8 +260,7 @@ useEffect(() => {
             </div>
           </div>
         )}
-        
-        {/* Floating quill decoration */}
+
         <motion.div
           animate={{ 
             rotate: [0, -5, 0],

@@ -216,13 +216,12 @@ export default function Scrapbook() {
 
   return (
     <div className="bg-rose-50 min-h-screen relative overflow-hidden">
-      {/* Background Music */}
+
       <audio ref={audioRef} autoPlay loop>
         <source src="/sound/sparkle.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
 
-      {/* Back Button */}
       <button
         onClick={() => window.history.back()}
         className="absolute top-4 right-4 text-rose-600 bg-white border border-rose-300 rounded-full p-2 shadow hover:bg-rose-100 transition-all z-50"
@@ -231,7 +230,6 @@ export default function Scrapbook() {
         <FaTimes className="text-xl" />
       </button>
 
-      {/* Floating Hearts */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-10 left-1/4 text-red-300 text-6xl opacity-40 animate-pulse">
           <FaHeart />
@@ -244,7 +242,6 @@ export default function Scrapbook() {
         </div>
       </div>
 
-      {/* Header */}
       <div className="container mx-auto py-12 px-4">
         <header className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold text-rose-800 mb-4 flex items-center justify-center gap-4">
@@ -256,7 +253,6 @@ export default function Scrapbook() {
           <p className="text-xl text-rose-600">Just like my love for you</p>
         </header>
 
-        {/* Memories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {memories.map((mem, idx) => (
             <div
@@ -272,7 +268,6 @@ export default function Scrapbook() {
                 </span>
               </div>
 
-              {/* Media */}
               {mem.type === "photo" ? (
                 <div className="mb-4 polaroid">
                   <img
