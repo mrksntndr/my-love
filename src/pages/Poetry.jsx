@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
-import './Poetry.css'; // We'll create this for additional styles
+import './Poetry.css';
 
 const poetryCollection = [
   {
@@ -24,7 +24,7 @@ const poetryCollection = [
     id: 3,
     title: "Captivated",
     author: "Mark Santander",
-    content: `You captivated my heart in an instant.\nNo warning sings, no sound from the distance.\nYour aura pierced throughout my body.\nYou’re beautiful, amazing, and godly.\n\nI’ll offer you my heart and soul,\nLoving you until the end is my ultimate goal.\nWith use one smile, you changed my mind.\nAnd in that moment, I knew you were the one.`,
+    content: `You captivated my heart in an instant.\nNo warning signs, no sound from the distance.\nYour aura pierced throughout my body.\nYou’re beautiful, amazing, and godly.\n\nI’ll offer you my heart and soul,\nLoving you until the end is my ultimate goal.\nWith use one smile, you changed my mind.\nAnd in that moment, I knew you were the one.`,
     color: "bg-blue-50"
   },
   {
@@ -54,6 +54,13 @@ const poetryCollection = [
     author: "Mark Santander",
     content: `Hindi ko na nais balikan pa ang dati.\nAlam kong masalimuot ang mga nangyari.\nKung iyong pahihintulutan, ay gagawa tayong muli.\nNg bagong landas, di na muli magwawagi ang hapdi.\n\nAlam kong hindi na maiwawasto ang mga kahapon,\nKaya’t mas pipiliin ko na buuin ang sa ngayon.\nKung bubuksan mong muli ang iyong puso’t ngiti,\nAko’y narito, handang magsimulang muli.`,
     color: "bg-amber-50"
+  },
+  {
+    id: 8,
+    title: "Pagkamoot",
+    author: "Mark Santander",
+    content: `An pagkamoot ko saimo, dai nawawara bisan sa kasakit.\nMaski an panahon maglaog, bako ini nabubura sa isip.\nIkaw an pulot sa gabing ko na mapait,\nSa kasurong kan banggi, ikaw an liwanag kong init.\n\nPero saro sana akong parahampang na paraslayag,\nNahale an puso ko sa saimong bitbit na taming.\nMaging saimo an sakuya'ng pinapangadyi,\nSa lambang balod, ngaran mo an sakuya'ng awit.`,
+    color: "bg-orange-50"
   }
 ];
 
@@ -65,7 +72,7 @@ const PoetryBook = () => {
   const audioRef = useRef(null);
 
 useEffect(() => {
-  audioRef.current = new Audio('/sound/poetryaudio.mp3'); // <-- Replace with your actual file path
+  audioRef.current = new Audio('/sound/poetryaudio.mp3');
   audioRef.current.loop = true;
   audioRef.current.volume = 0.1;
   audioRef.current.play().catch(err => {
@@ -234,7 +241,7 @@ useEffect(() => {
                     by {currentPoem.author}
                   </p>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mb-8"></div>
-                  <pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 ? 'text-sm' : 'text-lg'}`}>
+                  <pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 ? 'text-sm' : 'text-lg'}`}>
                     {currentPoem.content}
                   </pre>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mt-8"></div>

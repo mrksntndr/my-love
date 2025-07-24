@@ -21,7 +21,7 @@ const milestones = [
   { title: "Going Out!", img: "/images/going-out.jpg", description: "We went out to get you a National ID then went to eat Samgyupsal. God, you are so pretty" },
   { title: "Celebration!", img: "/images/celebration.jpg", description: "The first time I met your mother in person. I was so scared but it all went well. I brought a cake which you liked" },
   { title: "Visiting", img: "/images/visiting.jpg", description: "We went on a date and ate some ramen then you visited our house before going home. Mama was so happy and she told me you're so kind and beautiful" },
-  { title: "Manila Date", img: "/images/going-to-manila.jpg", description: "We went to Manila City, rode a bicycle around intramuros then ate some pizza and paste at Manila Cafe. I miss doing those kinds of dates with you" },
+  { title: "Manila Date", img: "/images/going-to-manila.jpg", description: "We went to Manila City, rode a bicycle around intramuros then ate some pizza and pasta at Manila Cafe. I miss doing those kinds of dates with you" },
   { title: "A Very Special Day 1", img: "/images/special-day-1.jpg", description: "It's your birthday! We celebrated it outside and we ate at your favorite ramen restaurant. I love you so much babi!" },
   { title: "A Very Special Day 2", img: "/images/special-day-2.jpg", description: "After going out, we went home. You blew your candle and made a wish. We spent the night together until Christmas Day. I miss you so much!" },
   { title: "New Year With You", img: "/images/new-year.jpg", description: "We celebrated a new year together and would want to celebrate those until the end of our lifetime" },
@@ -41,8 +41,8 @@ const OurStory = () => {
   
     const backgroundAudioRef = useRef(null);
     const romanticAudioRef = useRef(null);
-    const foreverPromiseAudioRef = useRef(null); // Ref for "Forever Promise" audio
-    const hasPlayedLalimRef = useRef(false); // Track if "lalim" was already played on page 4
+    const foreverPromiseAudioRef = useRef(null);
+    const hasPlayedLalimRef = useRef(false);
 
     const itemsPerPage = 5;
     const totalPages = Math.ceil(milestones.length / itemsPerPage);
@@ -50,7 +50,7 @@ const OurStory = () => {
     const openModal = (data) => {
         setModalData(data);
       
-        // Only initialize background audio once (no playing here)
+        // Only initialize background audio once
         if (data.title === "How We Met" && !backgroundAudioRef.current) {
           backgroundAudioRef.current = new Audio("/sound/nobodygetsme.mp3");
           backgroundAudioRef.current.loop = true;

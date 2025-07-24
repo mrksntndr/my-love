@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-const primaryColor = "#dfc7a7"; // pastel light brown
+const primaryColor = "#dfc7a7"; 
 
 const HomePage = () => {
   const navigate = useNavigate();
