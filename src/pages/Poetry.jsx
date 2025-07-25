@@ -241,7 +241,7 @@ useEffect(() => {
                     by {currentPoem.author}
                   </p>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mb-8"></div>
-<pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 9 ? 'text-xs' : currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 ? 'text-sm' : 'text-lg'}`}>
+<pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 9 ? 'text-[8px]' : currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 ? 'text-sm' : 'text-lg'}`}>
   {currentPoem.content}
 </pre>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mt-8"></div>
