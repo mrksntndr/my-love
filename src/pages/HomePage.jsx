@@ -5,7 +5,7 @@ const primaryColor = "#dfc7a7";
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const pages = ["/our-story", "/photos", "/poetry", "/new-beginning"];
+  const pages = ["/our-story", "/photos", "/poetry", "/new-beginning", "/rays-of-hope"];
   const [rejected, setRejected] = useState(false);
   const [accepted, setAccepted] = useState(false);
   const [noClickCount, setNoClickCount] = useState(0);
@@ -75,6 +75,7 @@ const HomePage = () => {
           ))}
         </div>
       )}
+
       {accepted && (
         <div className="pointer-events-none fixed inset-0 z-30 overflow-hidden">
           {floatingTexts.map(({ id, top, left, rotate, delay }) => (
@@ -121,15 +122,26 @@ const HomePage = () => {
           <h2 className="text-3xl font-bold mb-12" style={{ color: primaryColor }}>
             Our Journey Together
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-            {['Our Story', 'Photos', 'Poetry', 'New Beginning'].map((item, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
+            {['Our Story', 'Photos', 'Poetry', 'New Beginning', 'Rays of Hope'].map((item, index) => (
               <button
                 key={index}
-                onClick={() => navigate(pages[index])}
+                onClick={() => {
+                  if (item === 'Rays of Hope') {
+                    const el = document.documentElement;
+                    if (el.requestFullscreen) el.requestFullscreen().catch(() => {});
+                    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+                    else if (el.msRequestFullscreen) el.msRequestFullscreen();
+                  }
+                  navigate(pages[index]);
+                }}
                 className="flex flex-col items-center transform hover:scale-110 transition duration-300"
               >
                 <svg className="w-20 h-20 mb-2" fill={primaryColor} viewBox="0 0 24 24">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09
+                    3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0
+                    3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
                 <span className="text-lg font-medium text-gray-700">{item}</span>
               </button>
@@ -153,11 +165,7 @@ const HomePage = () => {
           </p>
 
           {!rejected ? (
-            <div
-              className={`relative h-40 flex items-center gap-6 ${
-                isBegging ? "justify-center" : "justify-center md:justify-center"
-              }`}
-            >
+            <div className={`relative h-40 flex items-center gap-6 ${isBegging ? "justify-center" : "justify-center md:justify-center"}`}>
               <button
                 onClick={handleYesClick}
                 className={`${buttonBaseStyle} z-10`}

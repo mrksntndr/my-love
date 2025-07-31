@@ -5,6 +5,7 @@ import OurStory from './pages/OurStory';
 import Photos from './pages/Photos';
 import Poetry from './pages/Poetry';
 import NewBeginning from './pages/NewBeginning';
+import RaysOfHope from './pages/RaysOfHope';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/poetry" element={<Poetry />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/new-beginning" element={<NewBeginning />} />
+        <Route path="/rays-of-hope" element={<RaysOfHope />} />
       </Routes>
     </BrowserRouter>
   );

@@ -68,6 +68,13 @@ const poetryCollection = [
     author: "Mark Santander",
     content: `Deeper than the ocean, higher than the sky.\nA love that does not know how to say goodbye.\nNever giving up no matter the situation,\nI anchor my soul to our shared constellation.\nCan I hold your hand until the end of time?\nA promise sealed in stars, eternally sublime.\n\nGoverned by love and trust,\nOur new bond no storm can ever rust.\nNot even the strongest earthquake can bring us down.\nZealously we stand, with hearts as our crown.\nAnd when you are ready, I will be here.\nLonging for you love and touch, my dear.\nEvery single day my heart screams for your name.\nSilently waiting, like the moon awaits the flame.`,
     color: "bg-blue-50"
+  },
+    {
+    id: 10,
+    title: "Stars",
+    author: "Mark Santander",
+    content: `Your presence feels like poetry in a noisy world.\nA Let your worries drift into space. I’ll keep your light safe.\nNever giving up no matter the situation,\nI’ll gather every scattered star that ever mirrored your name.\nAnd tuck them into the quiet corners of your heart.\n\nEven though there are no rhymes in this poem,\nThere is rhythm in the way you breathe beside me,\nAnd when the darkness forgets your spark.\nI’ll remind the universe — you are made of light.`,
+    color: "bg-amber-50"
   }  
 ];
 
@@ -79,9 +86,9 @@ const PoetryBook = () => {
   const audioRef = useRef(null);
 
 useEffect(() => {
-  audioRef.current = new Audio('/sound/poetryaudio.mp3');
+  audioRef.current = new Audio('/sound/yellow.mp3');
   audioRef.current.loop = true;
-  audioRef.current.volume = 0.1;
+  audioRef.current.volume = 0.2;
   audioRef.current.play().catch(err => {
     console.warn("Audio play was prevented. User interaction may be required.");
   });
@@ -241,7 +248,7 @@ useEffect(() => {
                     by {currentPoem.author}
                   </p>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mb-8"></div>
-<pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 9 ? 'text-[8px]' : currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 ? 'text-sm' : 'text-lg'}`}>
+<pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 9 || currentPoem.id === 10 ? 'text-[8px]' : currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 ? 'text-sm' : 'text-lg'}`}>
   {currentPoem.content}
 </pre>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mt-8"></div>
