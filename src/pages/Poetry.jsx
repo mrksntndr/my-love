@@ -75,7 +75,42 @@ const poetryCollection = [
     author: "Mark Santander",
     content: `Your presence feels like poetry in a noisy world.\nA Let your worries drift into space. I’ll keep your light safe.\nNever giving up no matter the situation,\nI’ll gather every scattered star that ever mirrored your name.\nAnd tuck them into the quiet corners of your heart.\n\nEven though there are no rhymes in this poem,\nThere is rhythm in the way you breathe beside me,\nAnd when the darkness forgets your spark.\nI’ll remind the universe — you are made of light.`,
     color: "bg-amber-50"
-  }  
+  },
+  {
+   id: 11,
+   title: "My favorite color",
+   author: "Mark Santander",
+   content: `She asked me, "What's your favorite color?"\nA question so simple-yet my heart froze.\nWords tangled on my tougue like shy petals in the wind.\n\nSo I turned the question back to her.\nShe smiled softly and said, "Brown".\n\nFrom that moment, brown was never just a color.\nIt became the warmth of her eyes.\nAnd ever since, I've paintend my world in the shades of her.`,
+   color: "bg-orange-50"
+  },
+  {
+   id: 12,
+    title: "Constellations",
+    author: "Mark Adrian Santander",
+    content:  `Perhaps the stars have yet to meet in the sky,\nBut one day, they will find their way to each other.\nJust as the constellations weave their eternal dance above.\nIn that moment, I will feel your warmth once more,\n\nAnd together, we will not just be a love,\nBut entire galaxies, colliding in endless light.\nOur souls would became one again,\nA love that trancends from time and space until eternity.`,
+   color: "bg-blue-50",
+  },
+  {
+    id: 13,
+    title: "Drifting Towards Your Distant Floating World",
+    author: "Mark Adrian Santander",
+    content: `Perhaps my presence no longer blooms in your heart,\nAnd my voice no longer lingers like a cherished song.\nYet because I love you as the sea loves the shore,\nI will grant your heart its horizon.\nBut if you asked me, Do I still love you?\nI would cry it to the heavens until the stars themselves listened, \nHow deeply I love you, how badly I miss you.\nThat every beat of my heart is carved in your name.\nUntil that day, I will burn quietly in the shadows,\nWaiting for the moment you come home to me.`,
+    color: "bg-amber-50",
+  },
+  {
+    id: 14,
+    title: "Whisper to the stars",
+    author: "Mark Adrian Santander",
+    content: `Every night, I whisper to the stars,\nHoping they’ll carry my wish to you.\nTo feel your love and warmth once more,\nYet the silence screams louder than any words.\nEach dawn, I wake with the same prayer,\nTo call you mine again,\nPerhaps I am just living in my own fantasy,\nBut even in this fragile fantasy,\nI love you and I miss you.\nMore than the night misses the sun.\nMore than the stars miss the moon.\nCause my love for you is endless, boundless, and timeless.\nAnd I will wait for you, no matter how long it takes.`,
+    color: "bg-orange-50"
+  },
+  {
+    id: 15,
+    title: "One in a Billion",
+    author: "Mark Adrian Santander",
+    content: `How can someone not be in love with someone like you?\nYou are beautiful, kind, and smart.\nVery rare and one of a kind.\nA true gem in the world full of stones.\nYou are like a rose in a garden,\nYou are like a pearl in the sea.\nAnd every day I ponder,\nHow someone like me can be loved by you.\nYou are the dawn that kisses the horizon,\nA melody that lingers in my soul,\n A constant star that burns brighter than the rest.\nIf the world were to forget what beauty is,\nIt would still remember your name.\nIf the oceans dried and the skies went dark,\nYour glowing light would be the only one that will guide me home.`,
+    color: "bg-blue-50"
+  }
 ];
 
 const PoetryBook = () => {
@@ -248,7 +283,7 @@ useEffect(() => {
                     by {currentPoem.author}
                   </p>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mb-8"></div>
-<pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 9 || currentPoem.id === 10 ? 'text-[8px]' : currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 ? 'text-sm' : 'text-lg'}`}>
+<pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 9 || currentPoem.id === 10 || currentPoem.id === 11 || currentPoem.id === 13 || currentPoem.id === 14 || currentPoem.id === 15? 'text-[8px]' : currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 || currentPoem.id === 12? 'text-sm' : 'text-lg'}`}>
   {currentPoem.content}
 </pre>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mt-8"></div>
