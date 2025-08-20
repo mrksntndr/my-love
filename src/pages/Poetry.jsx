@@ -110,7 +110,29 @@ const poetryCollection = [
     author: "Mark Adrian Santander",
     content: `How can someone not be in love with someone like you?\nYou are beautiful, kind, and smart.\nVery rare and one of a kind.\nA true gem in the world full of stones.\nYou are like a rose in a garden,\nYou are like a pearl in the sea.\nAnd every day I ponder,\nHow someone like me can be loved by you.\nYou are the dawn that kisses the horizon,\nA melody that lingers in my soul,\n A constant star that burns brighter than the rest.\nIf the world were to forget what beauty is,\nIt would still remember your name.\nIf the oceans dried and the skies went dark,\nYour glowing light would be the only one that will guide me home.`,
     color: "bg-blue-50"
+  },
+  {
+    id: 16,
+    title: "The Night She Cried",
+    author: "Mark Adrian Santander",
+    content: `The night, she called me,\n I heard her trembling voice though the line.\nI did not know what had gone wrong.\nIt gave me a worry beat in my heart so strong.\n\nI whispered softly "What happened dear, why are you crying?"\nHoping she'd hear it, I kept on trying.\nWishing my words could calm her fears.\nBut the call ended, didn't knew the reason for her tears.\nIf she ever tells me I promise to be in all ears.\n\n And even though I was far,\nMy heart was so near.\nI stayed awake for hours,\nTo hold her and keep her dear.`,
+    color: "bg-amber-50"
+  },
+  {
+    id: 17,
+    title: "You Look So Beautiful",
+    author: "Mark Adrian Santander",
+    content: `Today you look as beautiful as ever,\nYou're amazing, caring and oh so clever,\nYou are beautiful, smart and so outstanding,\nYour soft voice and pretty face so blinding.\nI am so happy spending time with you,\nEnjoying each moment, each minute too.\nYour laughter and smiles melts my heart.\nEverytime we meet, I wish time would not start.\nYour happiness will always be my priority,\nTo cherish you with love and sincerity.\nTo stand by your side through all the adversity,\nAnd treasure you endlessly for eternity.\nMay I have the honor of caring for your heart?\nIf you allow me, we'll never be apart.\nBut please take your time, there's no need to decide,\nI will wait with patience, with love as my guide.`,
+    color: "bg-orange-50"
+  },
+  {
+    id: 18,
+    title: "In You Embrace",
+    author: "Mark Adrian Santander",
+    content: `In your embrace, I find a haven of peace,\nWhere all worries and troubles cease.\nIn your smile, the world shines ever so bright.\nA radiant glow, a beacon of light.\n\nEvery inch of you is just perfection.\nSo mesmerizing, no hesitations.\nYou are my everything, what I can say.\nYou are always on my mind each and every day.\n\nIn your voice, I hear a gentle song.\nA melody that carries my heart along,\nWith every word, my spirit takes flight.\nGuided by love through the endless night.`,
+    color: "bg-blue-50"
   }
+
 ];
 
 const PoetryBook = () => {
@@ -283,7 +305,7 @@ useEffect(() => {
                     by {currentPoem.author}
                   </p>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mb-8"></div>
-<pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 9 || currentPoem.id === 10 || currentPoem.id === 11 || currentPoem.id === 13 || currentPoem.id === 14 || currentPoem.id === 15? 'text-[8px]' : currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 || currentPoem.id === 12? 'text-sm' : 'text-lg'}`}>
+<pre className={`font-serif text-amber-900 whitespace-pre-line leading-relaxed ${currentPoem.id === 9 || currentPoem.id === 10 || currentPoem.id === 11 || currentPoem.id === 13 || currentPoem.id === 14 || currentPoem.id === 15 || currentPoem.id === 16 || currentPoem.id === 17 || currentPoem.id === 18? 'text-[8px]' : currentPoem.id === 2 || currentPoem.id === 3 || currentPoem.id === 4 || currentPoem.id === 5 || currentPoem.id === 6  || currentPoem.id === 7 || currentPoem.id === 8 || currentPoem.id === 12?'text-sm' : 'text-lg'}`}>
   {currentPoem.content}
 </pre>
                   <div className="w-24 h-1 bg-amber-300 mx-auto mt-8"></div>
